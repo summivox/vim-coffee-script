@@ -32,8 +32,7 @@ endif
 " Get a `makeprg` for the current filename. This is needed to support filenames
 " with spaces and quotes, but also not break generic `make`.
 function! s:GetMakePrg()
-  return g:coffee_compiler . ' -c ' . g:coffee_make_options . ' $* '
-  \                        . fnameescape(expand('%'))
+  return 'coffee -p ' . g:coffee_make_options . ' $* ' . fnameescape(expand('%'))
 endfunction
 
 " Set `makeprg` and return 1 if coffee is still the compiler, else return 0.
