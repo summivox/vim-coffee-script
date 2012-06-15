@@ -345,7 +345,6 @@ function! GetCoffeeIndent(curlinenum)
     endif
   endif
 
-  " If no indent or outdent is needed, keep the indent level of the previous
-  " line.
-  return previndent
+  " If no indent or outdent is needed, keep the indent level of the cursor
+  return -1
 endfunction
