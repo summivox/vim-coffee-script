@@ -1,3 +1,13 @@
+### Differences from official repo
+
+This is a fork of vim-coffee-script, which includes the following changes:
+
+- Upon running `:make`, no js file is generated.
+- Eco templates have automatic indentation, similar to Eruby.
+- When pressing `<backspace>` and then `<enter>`, the indentation is left as it were after the `<backspace>`, instead of jumping back to the level of the last non-blank line.
+
+<hr />
+
 This project adds [CoffeeScript] support to the vim editor. It handles syntax,
 indenting, compiling, and more. Also included is support for CoffeeScript in
 Haml and HTML.
