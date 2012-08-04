@@ -184,17 +184,7 @@ endfunction
 
 " Get the nearest previous line that isn't a comment.
 function! s:GetPrevNormalLine(startlinenum)
-  let curlinenum = a:startlinenum
-
-  while curlinenum
-    let curlinenum = prevnonblank(curlinenum - 1)
-
-    if !s:IsCommentLine(curlinenum)
-      return curlinenum
-    endif
-  endwhile
-
-  return 0
+  return prevnonblank(a:startlinenum - 1)
 endfunction
 
 " Try to find a comment in a line.
@@ -241,13 +231,6 @@ function! GetCoffeeIndent(curlinenum)
   " Don't do anything if on the first line.
   if a:curlinenum == 1
     return -1
-  endif
-
-  let prevlinenum = a:curlinenum - 1
-
-  " If continuing a comment, keep the indent level.
-  if s:IsCommentLine(prevlinenum)
-    return indent(prevlinenum)
   endif
 
   let prevlinenum = s:GetPrevNormalLine(a:curlinenum)
