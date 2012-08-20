@@ -10,6 +10,7 @@ endif
 let b:did_indent = 1
 
 setlocal autoindent
+setlocal nosmartindent
 setlocal indentexpr=GetCoffeeIndent(v:lnum)
 " Make sure GetCoffeeIndent is run when these are typed so they can be
 " indented or outdented.
