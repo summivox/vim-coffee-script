@@ -241,6 +241,11 @@ function! GetCoffeeIndent(curlinenum)
     return -1
   endif
 
+  " If continuing a comment, keep the indent level.
+  if s:IsCommentLine(prevlinenum)
+    return -1
+  endif
+
   " Indent based on the current line.
   let curline = s:GetTrimmedLine(a:curlinenum)
 
