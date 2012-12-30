@@ -32,8 +32,7 @@ endif
 
 " Get a `makeprg` for the current filename.
 function! s:GetMakePrg()
-  return g:coffee_compiler . ' -c ' . g:coffee_make_options . ' $* '
-  \                        . fnameescape(expand('%'))
+  return g:coffee_compiler.' -p ' . g:coffee_make_options . ' $* ' . fnameescape(expand('%'))
 endfunction
 
 " Set `makeprg` and return 1 if iced is still the compiler, else return 0.
