@@ -14,6 +14,6 @@ syn match coffeeAwait /\<\%(await\)\>/ display
 hi def link coffeeAwait Special
 
 syn match coffeeKeyword /\<\%(defer\|autocb\)\>/
-syn match coffeeGlobal /\<\%(coffee\)\>/ display
+syn match coffeeGlobal /\<\%(iced\)\>/ display
 
 let b:current_syntax = 'iced'
