@@ -1,3 +1,5 @@
+iced.catchExceptions()
+
 await
   await setTimeout(defer(), 1000)
   for i in [0...100] by 1
