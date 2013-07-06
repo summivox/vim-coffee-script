@@ -16,4 +16,6 @@ hi def link coffeeAwait Special
 syn match coffeeKeyword /\<\%(defer\|autocb\)\>/
 syn match coffeeGlobal /\<\%(iced\)\>/ display
 
+syn cluster coffeeAll contains=coffeeAwait
+
 let b:current_syntax = 'iced'
